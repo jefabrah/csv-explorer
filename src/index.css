@@ -1,0 +1,230 @@
+.App {
+  text-align: center;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+html, body, #root, .App, .dropzone-wrapper-content {
+  height: 100%;
+  width: 100%;
+}
+
+/* common button styling */
+.clear-filters-btn, .apply-filters-btn, .clear-sort-btn, .apply-sort-btn {
+  margin: 5px;
+  width: auto;
+  height: 25px;
+  background-color: #cecece;
+  color: #000000;
+  border-radius: 5px;
+  border: none;
+  font-size: 12px;
+  outline: none;
+}
+.clear-filters-btn:hover, .apply-filters-btn:hover, .clear-sort-btn:hover, .apply-sort-btn:hover {
+  background-color: #f2f2f2;
+}
+
+
+/* statistics container */
+.explorer .statistics-container {
+  border-bottom: 1px solid #cecece;
+  padding-bottom: 10px;
+}
+.explorer .statistics-container h3 {
+  font-size: 14px;
+  font-weight: bold;
+  margin-bottom: 0px;
+  margin-top: 5px;
+}
+.explorer .statistics-container .statistics {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-flow: row nowrap;
+  font-size: 12px;
+  padding-top: 5px;
+}
+
+/* filter controller */
+.explorer .filter-controller {
+  border-bottom: 1px solid #cecece;
+  padding-bottom: 10px;
+}
+.explorer .filter-controller h3 {
+  font-size: 14px;
+  font-weight: bold;
+  margin-bottom: 0px;
+  margin-top: 5px;
+}
+.explorer .filter-controller .string-filter-controls {
+  display: flex;
+  justify-content: space-around;
+  flex-flow: column nowrap;
+}
+.explorer .filter-controller .number-filter-controls {
+  display: flex;
+  justify-content: space-around;
+  flex-flow: column nowrap;
+}
+.explorer .filter-controller .filter-buttons {
+  display: flex;
+  justify-content: center;
+  flex-flow: row nowrap;
+}
+.explorer .filter-controller .filter-by-select-list #filterBy {
+  margin: 5px 10px;
+}
+
+/* sort controller */
+.explorer .sort-controller {
+  border-bottom: 1px solid #cecece;
+  padding-bottom: 10px;
+}
+.explorer .sort-controller h3 {
+  font-size: 14px;
+  font-weight: bold;
+  margin-bottom: 0px;
+  margin-top: 5px;
+}
+.explorer .sort-controller .string-sort-controls {
+  display: flex;
+  justify-content: space-around;
+  flex-flow: column nowrap;
+}
+.explorer .sort-controller .number-sort-controls {
+  display: flex;
+  justify-content: space-around;
+  flex-flow: column nowrap;
+}
+.explorer .sort-controller .sort-buttons {
+  display: flex;
+  justify-content: center;
+  flex-flow: row nowrap;
+}
+.explorer .sort-controller .sort-by-select-list #sortBy {
+  margin: 5px 10px;
+}
+
+/* pagination controls */
+.explorer .paginater {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: row nowrap;
+  padding: 0px 10px;
+  border-bottom: 1px solid #cecece;
+}
+.explorer .paginater .page-info {
+  margin-left: auto;
+}
+.explorer .paginater .paginater-controls {
+  margin-left: auto;
+}
+.explorer .paginater .paginater-controls .page-up {
+  margin: 5px;
+  width: 40px;
+  height: 25px;
+  background-color: #cecece;
+  color: #000000;
+  border-radius: 5px;
+  border: none;
+  font-size: 17px;
+  outline: none;
+}
+.explorer .paginater .paginater-controls .page-down {
+  width: 40px;
+  height: 25px;
+  background-color: #cecece;
+  color: #000000;
+  border-radius: 5px;
+  border: none;
+  font-size: 17px;
+  outline: none;
+}
+.explorer .paginater .paginater-controls .page-down:hover, .explorer .paginater .paginater-controls .page-up:hover {
+  background-color: #f2f2f2;
+}
+
+/* table */
+.explorer .table {
+  display: flex;
+  flex-flow: column nowrap;
+  padding: 10px;
+  position: relative;
+}
+.explorer .table .table-header {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0px 5px;
+  background-color: #dee2e6;
+}
+.explorer .table .field-detail {
+  position: absolute;
+  padding: 5px;
+  font-size: 12px;
+  background-color: #59fe3f;
+  top: initial;
+  z-index: 1;
+}
+.explorer .table .table-cell .table-header .field-detail {
+  position: absolute;
+  padding: 5px;
+  font-size: 12px;
+  top: initial;
+}
+.explorer .table .table-cell .field-detail {
+  position: static;
+  display: block;
+  padding: 0px;
+  background-color: #dbfcd6;
+  padding: 2px;
+}
+.explorer .table .field-detail .field-detail-label {
+  margin: 2px 0px;
+}
+.explorer .table .table-header .column-sort {
+  font-size: 14px;
+  margin-left: 5px;
+}
+.explorer .table .table-header h3 {
+  font-size: 10px;
+}
+.explorer .table .table-body {
+  display: flex;
+  flex-flow: row nowrap;
+}
+.explorer .table .table-body .table-column {
+  max-height: 80%;
+  display: flex;
+  flex-flow: column nowrap;
+  flex-grow: 1;
+}
+.explorer .table .table-column .table-cell {
+  border: 1px solid #cecece;
+  border-right: 1px solid transparent;
+  border-bottom: 1px solid transparent;
+  min-height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: column nowrap;
+  word-break: break-all;
+  font-size: 12px;
+}
+.explorer .table .table-column .table-cell.last-column {
+  border-right: 1px solid #cecece;
+}
+.explorer .table .table-column .table-cell.last-row {
+  border-bottom: 1px solid #cecece;
+}
